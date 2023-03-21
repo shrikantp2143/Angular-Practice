@@ -10,6 +10,9 @@
           class="list-group-item">
         </li>
       </ul>
+      <div *ngFor="let odd of numbers">
+        <li *appUnless="onlyOdd">{{odd}}</li>
+      </div>
       <ng-template [ngIf]="onlyOdd">
         <p>Only odd</p>
       </ng-template>
