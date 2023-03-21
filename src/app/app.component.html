@@ -27,6 +27,9 @@
         </div>
         
       </ul>
+      <div *ngFor="let odd of numbers">
+        <li *appUnless="onlyOdd">{{odd}}</li>
+      </div>
       <ng-template [ngIf]="onlyOdd">
         <p>Only odd</p>
       </ng-template>
@@ -36,7 +39,7 @@
     </div>
 
     <div>
-      <p appBetterHighlight>Hey Buddy this is just testing Own Directive</p>
+      <p appBetterHighlight [userColor]="'yellow'" [buDefaultColor]="'red'">Hey Buddy this is just testing Own Directive</p>
     </div>
     
   </div>
